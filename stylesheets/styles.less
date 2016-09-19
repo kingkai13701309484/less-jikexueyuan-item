@@ -1,0 +1,1266 @@
+// 宽 高 字体
+@template-number:10px;
+@percent:100%;
+//左右
+@template-lefts:left;
+@template-rights:right;
+@centers:center;
+@tops:top;
+//定位
+@template-relatives:relative;
+@absolutes:absolute;
+@autos:auto;
+//无
+@template-nones:none;
+@zeros:0;
+@repeats:no-repeat;
+@transparents:transparent;
+//线
+@solids:solid;
+//状态
+@inlines:inline;
+@blocks:block;
+@inlines-blocks:inline-block;
+@pointers:pointer;
+@boths:both;
+@hiddens:hidden;
+@bolds:bold;
+//颜色
+@colors-d:#ddd;
+@colors-e:#eee;
+@colors_6:#666;
+@colors_e2b:#e2bd00;
+@colors_f:#fff;
+@colors_9:#999;
+@colors_c:#ccc;
+@colors_3:#333;
+@colors_35b:#35b558;
+@colors_2d8:#2d85ca;
+@colors_34b:#34b34f;
+@colors_2e8:#2e85c8;
+@colors_328:#3287c8;
+@colors_ff5:#ff5c00;
+@colors_fdd:#fddeca;
+@colors_f5f:#f5f5f5;
+@colors_328:#3288cb;
+@colors_f3f:#f3fff6;
+@colors_41b:#41b962;
+
+
+
+
+//logo整个一行的样式
+.logo{
+    width: @template-number * 100;
+    margin: @zeros @autos;
+    height: @template-number * 7;
+    background: url(../images/logo.png) @template-lefts @centers @repeats;
+    background-size: @template-number*11.3 @template-number*4.1;
+}
+//搜索最外面的盒子
+.logo_l {
+    float: @template-lefts;
+    position: @template-relatives;
+    font-size: @template-number * 1.2;
+}
+//搜索框的样式
+.logo_l_1 {
+    width: @template-number * 34; 
+    height: @template-number * 3.6;
+    border: @template-number/10 @solids @colors-d;
+    margin: @template-number*1.8 @zeros @zeros @template-number*30;
+    float: @template-lefts;
+    padding-left: @template-number;
+    display: @inlines;
+
+    &:focus {
+        outline: @zeros;
+    }
+}
+//提交按钮
+.logo_l_2 {
+    width: @template-number*3.6;
+    height: @template-number*3.8;
+    border: @template-number/10 @solids @colors-d;
+    margin-top: @template-number*1.8;
+    background: @template-nones;
+    float: @template-lefts;
+    border-left: @template-nones;
+}
+//搜索里面的那三个小内容
+.logo_l_3 {
+    position: @absolutes;
+    right: @template-number*3.5;
+    top: @template-number*2.6;
+    cursor: @pointers;
+
+    ul li {
+        float: @template-lefts;
+        background: @colors-e;
+        padding: @zeros @template-number*0.5;
+        margin-right: @template-number;
+        color: @colors_6;
+    }
+}
+//提交按钮里面的图标
+.logo_l_4 {
+    position: @absolutes;
+    right: @template-number;
+    top: @template-number*2.8;
+}
+//logo最右边的用户信息
+.logo_r {
+    float: @template-rights;
+    width: @template-number*24;
+    height: @template-number*7;
+    line-height: @template-number*7;
+    background: url(../images/chat.gif) @template-lefts @centers @repeats;
+    background-size: @template-number*1.5 @template-number*1.3;
+    position: @template-relatives;
+}
+.logo_r_1 {
+    margin-left: @template-number*2.4;
+}
+.logo_r_2 {
+    padding: @template-number*0.3 @template-number*0.6;
+    background: @colors_e2b;
+    color: @colors_f;
+    font-size: @template-number*1.2;
+    border-radius: @template-number*0.2;
+    margin-left: @template-number*0.6;
+}
+.logo_r_3 {
+    color: @colors_35b;
+    margin-left: @template-number*0.6;
+    img {
+        winth: @template-number*1.2;
+        height: @template-number*0.6;
+        margin: @template-number*3.4 @zeros @zeros @template-number*0.5;
+    }
+}
+.logo_r_4 {
+    color: @colors_2d8;
+    margin-left: @template-number*1.2;
+    cursor: @pointers;
+}
+//用户信息滑过显示
+.logo_r_h {
+    position: @absolutes;
+    top: @template-number*3.6;
+    left: @template-number*13.6;
+    background: @transparents;
+    display: @template-nones;
+    ul {
+        border: @template-number/10 @solids @colors-d;
+        font-size: @template-number*1.2;
+        color: @colors_9;
+        background: @colors_f;
+        cursor: @pointers;
+        padding: @template-number @zeros;
+        li {
+        line-height: @template-number*2.5;
+        padding: @zeros @template-number*1.5;
+        }
+    }
+}
+.logo_r_h_1 {
+    width: @zeros;
+    height: @zeros;
+    background: @transparents;
+    border: @template-number*0.8 @solids;
+    border-left-color: @transparents;
+    border-bottom-color: @colors-d;
+    border-right-color: @transparents;
+    border-top-color: @transparents;
+    margin: @zeros @autos;
+    position: @template-relatives;
+}
+.logo_r_h_1_1 {
+    width: @zeros;
+    height: @zeros;
+    background: @transparents;
+    border: @template-number*0.7 @solids;
+    border-left-color: @transparents;
+    border-bottom-color: @colors_f;
+    border-right-color: @transparents;
+    border-top-color: @transparents;
+    margin: @zeros @autos;
+    position: @absolutes;
+    top: -(@template-number*0.5);
+    left: -(@template-number*0.7);
+}
+//导航上面的渐变
+.nav_t {
+    width: @percent;
+    height: @template-number*0.2;
+    background: linear-gradient(90deg, @colors_34b, @colors_2e8);
+}
+//导航最外面的阴影
+.nav_c {
+    height: @template-number*5;
+    width: @percent;
+    box-shadow: @zeros @template-number*0.2 @template-number*0.8 @colors_c;
+}
+//导航里面的内容
+.nav_b {
+    width: @template-number*100;
+    margin: @zeros @autos;
+}
+//导航左边的内容
+.nav_b_1 {
+    float: @template-lefts;
+    position: @template-relatives;
+    cursor: @pointers;
+    li {
+        float: @template-lefts;
+        line-height: @template-number*5;
+        padding: @zeros @template-number*3;
+        font-size: @template-number*1.6;
+        display: @inlines;
+        color: @colors_3;
+    }
+}
+//导航右边的内容
+.nav_b_2 {
+    float: @template-rights;
+    li {
+        float: @template-lefts;
+        line-height: @template-number*5;
+        padding: @zeros @template-number*2;
+        display: @inlines;
+        cursor: @pointers;
+        img {
+            margin: @template-number*1.7 @template-number @zeros @zeros;
+        }
+    }
+}
+//鼠标滑过导航显示内容
+.nav_h {
+    width: @template-number*99.8;
+    border: @template-number/10 @solids @colors-d;
+    height: @template-number*20;
+    position: @absolutes;
+    left: @zeros;
+    top: @template-number*5;
+    background: @colors_f;
+    box-shadow: @zeros @template-number*0.1 @template-number*0.4 @colors-d;
+    display: @template-nones;
+    z-index: 10;
+    ul {
+        float: @template-lefts;
+        padding: @template-number @template-number @zeros @zeros;
+        border-left: @template-number/10 @solids @colors-e;
+        position: @template-relatives;
+        li {
+            clear: @boths;
+            font-size: @template-number*1.2;
+            color: @colors_9;
+            line-height: @template-number*3;
+        }
+    }
+}
+.triangle {
+    width: @zeros;
+    height: @zeros;
+    border: @template-number @solids;
+    background: @transparents;
+    border-bottom-color: @colors-d;
+    border-left-color: @transparents;
+    border-right-color: @transparents;
+    border-top-color: @transparents;
+    position: @absolutes;
+    top: -(@template-number*2);
+    left: @template-number*5;
+    display: @template-nones;
+}
+.triangle_in {
+    width: @zeros;
+    height: @zeros;
+    border: @template-number*0.9 @solids;
+    background: @transparents;
+    border-bottom-color: @colors-e;
+    border-left-color: @transparents;
+    border-right-color: @transparents;
+    border-top-color: @transparents;
+    position: @absolutes;
+    top: -(@template-number*0.8);
+    left: -(@template-number*0.9);
+}
+//banner一行最外面的大盒子
+.article {
+    width: @template-number*100;
+    margin: @template-number*2 @autos;
+}
+//banner中间的内容
+.article_c {
+    float: @template-lefts;
+    width: @percent;
+}
+.article_c_1 {
+    margin: @zeros @template-number*22;
+}
+//banner轮播图
+.article_c_1_1 {
+    overflow: @hiddens;
+    width: @template-number*56;
+    position: @template-relatives;
+    height: @template-number*26;
+}
+.article_in {
+    width: @template-number*500;
+    position: @absolutes;
+    left: @zeros;
+    top: @zeros;
+}
+//banner鼠标滑过时的那两个箭头
+.article_in_1 {
+    width: @template-number*4;
+    height: @template-number*5;
+    background: url(../images/arrow_l.png) -@template-number -(@template-number*0.5) @repeats;
+    position: @absolutes;
+    left: @zeros;
+    top: @template-number*10;
+    display: @template-nones;
+    cursor: @pointers;
+}
+.article_in_2 {
+    width: @template-number*4;
+    height: @template-number*5;
+    background: url(../images/arrow_r.png) -@template-number -(@template-number*0.5) @repeats;
+    position: @absolutes;
+    left: @template-number*52;
+    top: @template-number*10;
+    cursor: @pointers;
+    display: @template-nones;
+}
+.article_c_1_1 img {
+    float: @template-lefts;
+    cursor: @pointers;
+}
+.on {
+    background: @colors_35b!important;
+}
+.article_in_3 {
+    position: @absolutes;
+    left: @template-number*13;
+    bottom: @template-number;
+    li {
+        float: @template-lefts;
+        width: @template-number*4;
+        height: @template-number*0.2;
+        background: @colors_f;
+        margin-right: @template-number*2;
+        cursor: @pointers;
+    }
+}
+//banner下面那3个dl
+.article_c_1_2 {
+    width: @template-number*55.8;
+    border: @template-number/10 @solids @colors-d;
+    margin-top: @template-number;
+    position: @template-relatives;
+    overflow: @hiddens;
+    img {
+        width: @template-number*4;
+        height: @template-number*4;
+        margin: @template-number @zeros @template-number*0.6 @zeros;
+    }
+    dl {
+        width: @template-number*18.5;
+        text-align: @centers;
+        font-size: @template-number*1.2;
+        color: @colors_6;
+        border-right: @template-number/10 @solids @colors-e;
+        display: @inlines-blocks;
+        padding: @template-number*0.8 @zeros @template-number*0.4 @zeros;
+        cursor: @pointers;
+    }
+}
+.article_c_1_2_out{
+    width: @template-number*96;
+    height: @template-number*11;
+    overflow: @hiddens;
+    position: @template-relatives;
+}
+.article_c_1_2_in_l{
+    position: @absolutes;
+    left: 0px;
+    top: @template-number*2.9;
+    background:url(../images/arrow_l.png) -(@template-number*0.8) -(@template-number*0.4) @repeats;
+    width: @template-number*4;
+    height: @template-number*5.2;
+    display: @template-nones;
+}
+.article_c_1_2_in_r{
+    position: @absolutes;
+    left: @template-number*52;
+    top: @template-number*2.9;
+    background:url(../images/arrow_r.png) -(@template-number*0.8) -(@template-number*0.4) @repeats;
+    width: @template-number*4;
+    height: @template-number*5.2;
+    display: @template-nones;
+}
+//banner左边的盒子
+.article_l {
+    width: @template-number*21;
+    float: @template-lefts;
+    margin-left: -@percent;
+    border: @template-number/10 @solids @colors-d;
+    border-top: @template-number/5 @solids @colors_35b;
+    position: @template-relatives;
+    border-right: @zeros;
+    z-index: 1;
+    cursor: @pointers;
+    ul li {
+        height: @template-number*3.6;
+        line-height: @template-number*3.6;
+        padding: @zeros @template-number*2;
+        border-bottom: @template-number/10 @solids @colors-e;
+        border-right: @template-number/10 @solids @colors-d;
+        span {
+            float: @template-rights;
+            color: @colors_9;
+        }
+    }
+}
+//鼠标滑过article_l里面的li显示的内容
+.article_l_1 {
+    width: @template-number*40;
+    padding: @template-number @template-number @template-number*3 @template-number;
+    border: @template-number/10 @solids @colors-d;
+    position: @absolutes;
+    top: -(@template-number*0.2);
+    left: @template-number*20.9;
+    background: @colors_f;
+    display: @template-nones;
+    z-index: -99;
+    min-height: @template-number*34;
+    a:hover {
+        color: @colors_35b;
+    }
+}
+
+.article_l_1p {
+    font-size: @template-number*1.4;
+    width: @percent;
+    border-bottom: @template-number/10 @solids @colors-e;
+    line-height: @template-number*3;
+    color: @colors_3;
+}
+
+.article_l_1pp {
+    font-size: @template-number*1.2;
+    line-height: @template-number*3;
+    margin-bottom: @template-number*1.5;
+    color: @colors_6;
+}
+//banner右边的盒子
+.article_r {
+    width: @template-number*20.8;
+    height: @template-number*36.9;
+    float: @template-lefts;
+    margin-left: -(@template-number*21);
+    border: @template-number/10 @solids @colors-d;
+}
+//banner右边最上面的盒子
+.article_r_1 {
+    border-bottom: @template-number/10 @solids @colors-e;
+    padding-bottom: @template-number;
+    cursor: @pointers;
+}
+//快讯的样式
+#article_r_1p {
+    padding-top: @template-number;
+    font-size: @template-number*1.4;
+    color: @colors_3;
+}
+.article_r_1 p {
+    padding: @zeros @template-number*2 @zeros @template-number*2;
+    font-size: @template-number*1.2;
+    color: @colors_6;
+}
+//banner右边中间的盒子
+.article_r_2 {
+    border-bottom: @template-number/10 @solids @colors-e;
+    height: @template-number*9;
+}
+//banner右边中间的盒子的左边
+.article_r_2_l {
+    float: @template-lefts;
+    padding: @template-number @template-number @zeros @template-number*2;
+    img {
+        width: @template-number*4;
+        height: @template-number*4;
+    }
+}
+//banner右边中间的盒子的右边
+.article_r_2_r {
+    float: @template-lefts;
+    padding-top: @template-number;
+    font-size: @template-number*1.2;
+    cursor: @pointers;
+    a:hover {
+        color: @colors_35b;
+    }
+}
+.article_r_2_r1 {
+    color: @colors_328;
+    padding: @zeros @template-number @zeros @template-number*0.5;
+}
+.article_r_2_r2 {
+    color: @colors_ff5;
+    background: @colors_fdd;
+    padding: @zeros @template-number*0.6;
+    width: @template-number*5;
+    text-align: @centers;
+    margin-top: @template-number*0.5;
+}
+//banner右边最下面的盒子
+.article_r_3 ul li {
+    width: 24.5%;
+    float: @template-lefts;
+    font-size: @template-number*1.2;
+    height: @template-number*7.4;
+    text-align: @centers;
+    border-right: @template-number/10 @solids @colors-e;
+    border-bottom: @template-number/10 @solids @colors-e;
+}
+//去除li右边的线
+#article_r_3r {
+    border-right: @zeros;
+}
+//去除li底部的线
+.article_r_3b {
+    border-bottom: @zeros!important;
+}
+//每个li下面的小三角
+.article_r_3_0 {
+    width: @zeros;
+    height: @zeros;
+    background: @transparents;
+    border: @template-number*0.8 @solids;
+    border-left-color: @transparents;
+    border-bottom-color: @transparents;
+    border-right-color: @transparents;
+    border-top-color: @colors-d;
+    margin: @zeros @autos;
+}
+//给li加图标按钮
+.article_r_3_1 {
+    width: @percent;
+    height: @template-number*3.8;
+    background: url(../images/icon.png) @template-number*0.8 @template-number*0.8 @repeats;
+    background-size: @template-number*7.1 @template-number*23.2;
+}
+.article_r_3_2 {
+    width: @percent;
+    margin-top: @template-number;
+    height: @template-number*2.8;
+    background: url(../images/icon.png) @template-number*0.8 -(@template-number*3) @repeats;
+    background-size: @template-number*7.1 @template-number*23.2;
+}
+.article_r_3_3 {
+    width: @percent;
+    margin-top: @template-number;
+    height: @template-number*2.8;
+    background: url(../images/icon.png) @template-number*0.8 -(@template-number*5.8) @repeats;
+    background-size: @template-number*7.1 @template-number*23.2;
+}
+.article_r_3_4 {
+    width: @percent;
+    margin-top: @template-number;
+    height: @template-number*2.8;
+    background: url(../images/icon.png) @template-number*0.8 -(@template-number*8.6) @repeats;
+    background-size: @template-number*7.1 @template-number*23.2;
+}
+.article_r_3_5 {
+    width: @percent;
+    margin-top: @template-number;
+    height: @template-number*2.8;
+    background: url(../images/icon.png) @template-number*0.8 -(@template-number*11.6) @repeats;
+    background-size: @template-number*7.1 @template-number*23.2;
+}
+.article_r_3_6 {
+    width: @percent;
+    margin-top: @template-number;
+    height: @template-number*2.8;
+    background: url(../images/icon.png) @template-number*0.8 -(@template-number*14.2) @repeats;
+    background-size: @template-number*7.1 @template-number*23.2;
+}
+.article_r_3_7 {
+    width: @percent;
+    margin-top: @template-number;
+    height: @template-number*2.8;
+    background: url(../images/icon.png) @template-number*0.8 -(@template-number*17) @repeats;
+    background-size: @template-number*7.1 @template-number*23.2;
+}
+.article_r_3_8 {
+    width: @percent;
+    margin-top: @template-number;
+    height: @template-number*2.8;
+    background: url(../images/icon.png) @template-number*0.8 -(@template-number*20) @repeats;
+    background-size: @template-number*7.1 @template-number*23.2;
+}
+.article_r_3 {
+    position: @template-relatives;
+    cursor: @pointers;
+}
+//鼠标滑过banner右边下面时的效果
+.article_r_hide {
+    width: @template-number*20.8;
+    height: @template-number*14.8;
+    position: @absolutes;
+    top: @zeros;
+    left: @zeros;
+    background: @colors_f;
+    display: @template-nones;
+}
+.article_r_hide1 span {
+    float: @template-lefts;
+    font-size: @template-number*1.2;
+    width: 24.5%;
+    background: @colors_f5f;
+    border-right: @template-number/10 @solids @colors-e;
+    border-bottom: @template-number/10 @solids @colors-e;
+    text-align: @centers;
+}
+.article_r_hide2 {
+    padding: @template-number*2 @template-number;
+    clear: @boths;
+    display: @template-nones;
+    height: @template-number*8.6;
+    dl {
+        float: @template-lefts;
+        margin-right: 3.34%;
+        width: 30%;
+        img {
+            width: @template-number*5.5;
+            height: @template-number*7.3;
+        }
+    }
+    dd {
+        width: @template-number*5.5;
+    }
+    a:hover {
+        color: @colors_35b;
+    }
+}
+.article_r_hide3 {
+    display: @blocks;
+}
+.article_r_hide4 {
+    background: @colors_f!important;
+    border-bottom: @zeros!important;
+    color: @colors_35b;
+}
+//内容导航最外面的盒子
+.cnav {
+    width: @template-number*100;
+    margin: @zeros @autos;
+    clear: @boths;
+    padding-top: @template-number*2;
+}
+//内容导航条
+.cnav_t ul {
+    width: @percent;
+    border-bottom: @template-number/5 @solids @colors-e;
+    height: @template-number*5;
+    li {
+        width: 16.5%;
+        float: @template-lefts;
+        line-height: @template-number*5;
+        text-align: @centers;
+        position: @template-relatives;
+        cursor: @pointers;
+    }
+}
+.cnav_lis {
+    border-bottom: @template-number/5 @solids @colors_35b;
+    color: @colors_35b;
+}
+.canv_li_triangle {
+    width: @zeros;
+    height: @zeros;
+    border: @template-number/2 @solids;
+    background: @transparents;
+    border-bottom-color: @colors_35b;
+    border-left-color: @transparents;
+    border-right-color: @transparents;
+    border-top-color: @transparents;
+    position: @absolutes;
+    bottom: @zeros;
+    left: @template-number*7.8;
+}
+//内容导航条下面的内容
+.cnav_b {
+    display: @template-nones;
+    cursor: @pointers;
+}
+.cnav_show {
+    display: @blocks;
+}
+.cnav_b dl,
+.fine_b dl {
+    width: 22.55%;
+    float: @template-lefts;
+    margin-right: 3%;
+    margin-top: @template-number*2;
+    border: @template-number/10 @solids @colors-d;
+}
+.cnav_b dl dd {
+    margin: @template-number;
+    color: @colors_6;
+    font-size: @template-number*1.2;
+    line-height: @template-number*1.6;
+}
+//改变第一个dd的样式
+.cnav_bb {
+    font-size: @template-number*1.6!important;
+    color: @colors_3;
+    padding-bottom: @template-number*3;
+}
+.cnav_b dt {
+    position: @template-relatives;
+    img {
+        width: @template-number*23.3;
+        height: @template-number*12.9;
+    }
+}
+.cnav_out {
+    position: @template-relatives;
+}
+.cnav_hove {
+    position: @absolutes;
+    left: -(@template-number*0.1);
+    top: -(@template-number*2.1);
+    background: @colors_f;
+    z-index: 10;
+    width: @template-number*22.6!important;
+    display: @template-nones;
+}
+.cnav_img {
+    width: @template-number*22.6;
+    height: @template-number*12.9;
+    position: @absolutes;
+    top: @zeros;
+    left: @zeros;
+    background: rgba(@zeros, @zeros, @zeros, @template-number*0.02);
+}
+.cnav_img1 {
+    width: @template-number*4.2;
+    height: @template-number*4.2;
+    background: url(../images/icon_1.png) -(@template-number*5.7) @tops @repeats;
+    margin: @template-number*2 @autos @zeros @autos;
+}
+.cnav_img2 {
+    background: url(../images/icon_1.png) -(@template-number*11.5) -(@template-number*4) @repeats;
+    height: @template-number*2.5;
+    width: @template-number*2.5;
+}
+.cnav_bb1 {
+    display: @template-nones;
+}
+.cnav_b dd img {
+    width: @template-number*1.6;
+    height: @template-number*1.6;
+    margin-right: @template-number;
+}
+.cnav_b dd span {
+    float: @template-rights;
+}
+//职业路径图最外面的盒子
+.profession,
+.knowledge,
+.fine {
+    width: @template-number*100;
+    margin: @zeros @autos;
+    padding-top: @template-number*4;
+    clear: @boths;
+}
+//职业路径图标题
+.profession_t {
+    font-size: @template-number*1.6;
+    height: @template-number*2;
+    p {
+        float: @template-lefts;
+        font-weight: bold;
+    }
+    span {
+        font-size: @template-number*1.2;
+        color: @colors_f;
+        background: @colors_9;
+        width: @template-number*1.4;
+        height: @template-number*1.4;
+        border-radius: 50%;
+        display: @blocks;
+        float: @template-lefts;
+        margin: @template-number*0.7 0 0 @template-number;
+        line-height: @template-number*1.4;
+        text-align: @centers;
+    }
+    a {
+        float: @template-rights;
+        font-size: @template-number*1.4;
+        color:@colors_328;
+        line-height: @template-number*2;
+        cursor: @pointers;
+    }
+}
+//职业路径图下面的内容
+.profession_b,
+.knowledge_b,
+.fine_b,
+.wiki,
+.strategy,
+.cooperation {
+    clear: @boths;
+    margin-top: @template-number*2;
+}
+.profession_b {
+    height: @template-number*62;
+    img {
+        width: @template-number*19.9;
+        height: @template-number*12;
+    }
+    dl {
+        width: @template-number*19.8;
+        display: @inlines-blocks;
+        float: @template-lefts;
+        height: @template-number*31;
+        cursor: @pointers;
+        border: @template-number/10 @solids @colors-d;
+        overflow: @hiddens;
+    }
+    dd {
+        text-align: @centers;
+        font-size: @template-number*1.2;
+        color: @colors_9;
+    }
+}
+.profession_bdd {
+    font-size: @template-number*1.6!important;
+    color: @colors_3!important;
+    margin: @template-number*2 @zeros;
+}
+.profession_b_1 {
+    height: @template-number*3.5;
+    width: @template-number*14;
+    border: @template-number/10 @solids @colors_35b;
+    background: @colors_f3f;
+    color: @colors_41b;
+    font-size: @template-number*1.6;
+    line-height: @template-number*3.5;
+    text-align: @centers;
+    margin: @template-number*2 @zeros @template-number*2 @template-number*3;
+}
+#profession_b1{
+    border-right: @template-number/10 @solids @colors_f;
+    border-bottom: @template-number/10 @solids @colors_f;
+}
+#profession_b2{
+    border-right: @template-number/10 @solids @colors_f;
+    border-bottom: @template-number/10 @solids @colors_f;
+}
+#profession_b3{
+    border-right: @template-number/10 @solids @colors_f;
+    border-bottom: @template-number/10 @solids @colors_f;
+}
+#profession_b4{
+    border-right: @template-number/10 @solids @colors_f;
+    border-bottom: @template-number/10 @solids @colors_f;
+}
+#profession_b5{
+
+    border-bottom: @template-number/10 @solids @colors_f;
+}
+#profession_b6{
+    border-right: @template-number/10 @solids @colors_f;
+}
+#profession_b7{
+    border-right: @template-number/10 @solids @colors_f;
+}
+#profession_b8{
+    border-right: @template-number/10 @solids @colors_f;
+}
+#profession_b9{
+    border-right: @template-number/10 @solids @colors_f;
+}
+//知识体系图下面的内容
+.knowledge_out{
+   width: @template-number*16.5;
+   height: @template-number*13.5;
+   float: @template-lefts;
+   position: @template-relatives; 
+   border: @template-number/10 @solids @colors-e;
+
+}
+.knowledge_b dl {
+    float: @template-lefts;
+    width: @template-number*16.5;
+    height: @template-number*9.5;
+    padding: @template-number*2 @zeros;
+    position: @absolutes;
+    left: @zeros;
+    top: @zeros;
+    cursor: @pointers;
+    height: @template-number*9.5;
+    z-index: 2;
+    background:@colors_f;
+    transform: rotateY(0deg);
+    backface-visibility: @hiddens;
+    transition: .6s;
+    img {
+        width: @template-number*4;
+        height: @template-number*4;
+    }
+}
+.knowledge_b dt {
+    text-align: @centers;
+}
+.knowledge_b dd {
+    font-size: @template-number*1.8;
+    text-align: @centers;
+}
+.knowledge_bdd {
+    font-size: @template-number*1.4!important;
+    color: @colors_35b!important;
+}
+.knowledge_bdl {
+    border-top: @zeros!important;
+    border-left: @zeros!important;
+}
+.knowledge_bdl1 {
+    border-right: @zeros!important;
+}
+//鼠标滑过知识体系图显示
+.knowledge_hide {
+    width: @percent;
+    height: @template-number*13.5;
+    background: @colors-e;
+    position: @absolutes;
+    left: @zeros;
+    top: @zeros;
+    transform: rotateY(180deg);
+    transition: .6s;
+    backface-visibility: @hiddens;
+    p {
+        color: @colors_6;
+        text-align: @centers;
+        margin-top: @template-number*3.5;
+    }
+    input {
+        padding: @template-number*0.5 @template-number*3.5;
+        background: @colors_35b;
+        color: @colors_f;
+        text-align: @centers;
+        border: @zeros;
+        margin: @template-number*0.5 @autos @zeros @autos;
+        display: @blocks;
+        font-size: @template-number*1.6;
+    }
+}
+//精品系列课程下面的内容
+.fine_b dl {
+    position: @template-relatives;
+    cursor: @pointers;
+    img {
+        width: @template-number*20.1;
+        height: @template-number*16.003;
+    }
+}
+.fine_b dt {
+    text-align: @centers;
+}
+.fine_b dd {
+    padding: @template-number @template-number*2;
+}
+.fine_b_1 {
+    color: @colors_9;
+    font-size: @template-number*1.2;
+    span {
+        float: @template-rights;
+        background: @colors_35b;
+        padding: @zeros @template-number;
+        color: @colors_f;
+        font-size: @template-number*1.2;
+        border-radius: @template-number*0.3;
+    }
+}
+//鼠标滑过精品系列课程隐藏的内容
+.fine_hide {
+    background: rgba(255, 255, 255, 0.95);
+    width: @template-number*22.55;
+    height: @template-number*20.5;
+    position: @absolutes;
+    left: @zeros;
+    top: @zeros;
+    display: @template-nones;
+    img {
+        width: @template-number*5!important;
+        height: @template-number*5!important;
+        border-radius: @template-number*2.5;
+        margin-top: @template-number*2;
+    }
+    p {
+        padding: @zeros @template-number;
+        color: @colors_9;
+        text-align: @centers;
+    }
+    input {
+        padding: @template-number*0.5 @template-number*3;
+        background: @colors_35b;
+        border: @zeros;
+        color: @colors_f;
+        margin: @template-number*2 @template-number*5.5 @zeros @template-number*5.5;
+    }
+}
+//WIKI下面的内容
+.wiki_l {
+    width: 29.1%;
+    float: @template-lefts;
+    padding: @template-number*2;
+    border: @template-number/10 @solids @colors-d;
+    cursor: @pointers;
+    p {
+        font-weight: @bolds;
+    }
+    dl {
+        width: 45%;
+        float: @template-lefts;
+        margin-top: @template-number;
+        dt {
+            background: @colors_f;
+            height: @template-number*20;
+            width: @template-number*14.2;
+            border-radius: @template-number*0.5;
+            position: @template-relatives;
+        }
+    }
+    img {
+        width: @template-number*14.2;
+        height: @template-number*20;
+        border-radius: @template-number*0.5;
+        margin-bottom: @template-number*0.5;
+    }
+    dd {
+        text-align: @centers;
+    }
+    ul {
+        clear: @boths;
+        font-size: @template-number*1.2;
+        color: @colors_9;
+        padding-top: @template-number;
+        li span {
+            float: @template-rights;
+        }
+    }
+}
+#wiki_ls {
+    border-left: @template-number/10 @solids @colors_f;
+}
+#wiki_ls1 {
+    border-left: @template-number/10 @solids @colors_f;
+}
+.wiki_hide{
+    position: @absolutes;
+    left: @template-number*11;
+    top: -(@template-number*1.6);
+    background: url(../images/look.png) @template-lefts @tops @repeats;
+    background-size: 40%;
+    height: @template-number*2.5;
+    width: @template-number*10;
+    display: @template-nones;
+}
+.wiki_l_1 {
+    font-size: @template-number*1.2;
+    color: @colors_9;
+}
+//战略合作伙伴样式
+.strategy,.media {
+    border: @template-number/10 @solids @colors-d;
+    padding: @template-number*2 0;
+    height: @template-number*5;
+    width: @template-number*100;
+    position: @template-relatives;
+    overflow: @hiddens;
+}
+.strategy img,.media img {
+    width: @template-number*15;
+    height: @template-number*5;
+    border: @template-number/10 @solids @colors-d;
+    float: @template-lefts;
+    margin-right: @template-number*0.8;
+}
+.strategy_out,.media_out{
+    width: @template-number*96;
+    margin-left:@template-number*2.4;
+    height: @template-number*5.2;
+    overflow: @hiddens;
+    position: @template-relatives;
+}
+.strategy_in_l,.media_in_l{
+    position: @absolutes;
+    left: @zeros;
+    top: @zeros;
+    background:url(../images/arrow_l.png) -(@template-number*0.8) -(@template-number*0.4) @repeats;
+    width: @template-number*4;
+    height: @template-number*5.2;
+    display: @template-nones;
+}
+.strategy_in_r,.media_in_r{
+    position: @absolutes;
+    right: @zeros;
+    top: @zeros;
+    background:url(../images/arrow_r.png) -(@template-number*0.8) -(@template-number*0.4) @repeats;
+    width: @template-number*4;
+    height: @template-number*5.2;
+    display: @template-nones;
+}
+.strategy_in,.media_in,.cooperation_in,.article_c_1_2_in{
+    width: @template-number*500;
+    position: @absolutes;
+    left: @zeros;
+    top: @zeros;
+}
+.media{
+    margin-top: @template-number*2;
+}
+//合作院校样式
+.cooperation {
+    border: @template-number/10 @solids @colors-d;
+    padding: @template-number*2;
+    height: @template-number*11;
+    position: @template-relatives;
+    overflow: @hiddens;
+    img {
+        width: @template-number*11;
+        height: @template-number*11;
+        margin-right: @template-number*2.7;
+    }
+}
+.cooperation_out{
+    width: @template-number*96;
+    height: @template-number*11;
+    overflow: @hiddens;
+    position: @template-relatives;
+}
+.cooperation_in_l{
+    position: @absolutes;
+    left: @zeros;
+    top: @template-number*2.9;
+    background:url(../images/arrow_l.png) -(@template-number*0.8) -(@template-number*0.4) @repeats;
+    width: @template-number*4;
+    height: @template-number*5.2;
+    display: @template-nones;
+}
+.cooperation_in_r{
+    position: @absolutes;
+    right: @zeros;
+    top: @template-number*2.9;
+    background:url(../images/arrow_r.png) -(@template-number*0.8) -(@template-number*0.4) @repeats;
+    width: @template-number*4;
+    height: @template-number*5.2;
+    display: @template-nones;
+}
+//底部样式
+.footer {
+    background: @colors-e;
+    border-top: @template-number/10 @solids @colors-d;
+    border-bottom: @template-number/10 @solids @colors-d;
+    padding: @template-number*2 @template-number*2 @template-number*2 @zeros;
+    height: @template-number*24;
+    margin-top: @template-number*4;
+}
+.footer_b {
+    width: @template-number*100;
+    margin: @zeros @autos;
+}
+//底部那几个ul
+.footer ul {
+    border-left: @template-number/10 @solids @colors-d;
+    font-size: @template-number*1.2;
+    color: @colors_6;
+    padding-left: @template-number*4;
+    margin-right: @template-number*8;
+    float: @template-lefts;
+    display: @inlines;
+    li {
+        line-height: @template-number*2.8;
+        cursor: @pointers;
+    }
+}
+.footer_1 {
+    font-size: @template-number*1.4;
+    font-weight: @bolds;
+}
+//底部右边的样式
+.footer_r {
+    float: @template-lefts;
+    padding: @zeros @zeros @zeros @template-number*4;
+    border-left: @template-number/10 @solids @colors-d;
+}
+//右边里面的标题
+.footer_r_1 {
+    font-size: @template-number*1.6;
+    font-weight: @bolds;
+    color: @colors_35b;
+}
+//书机客户端
+.footer_r_2 {
+    background: url(../images/iphone.png) @template-lefts @tops @repeats;
+    background-size: @template-number*2.1 @template-number*3.906;
+    padding-left: @template-number*4;
+    margin: @template-number 0;
+    color: @colors_9;
+    cursor: @pointers;
+}
+.footer_r_2_1 {
+    font-size: @template-number*1.8;
+    font-weight: @bolds;
+    color: @colors_6;
+    line-height: @template-number*2;
+}
+//微信那几个按钮
+.footer_r_3_1 {
+    float: @template-lefts;
+    background: url(../images/icon_1.png) -(@template-number*2.2) @tops @repeats;
+    width: @template-number*3.2;
+    height: @template-number*3.2;
+    margin-right: @template-number;
+}
+#footer_r_3_2 {
+    background: url(../images/icon_1.png) -(@template-number*2.2) -(@template-number*8.2) @repeats;
+}
+#footer_r_3_3 {
+    background: url(../images/icon_1.png) -(@template-number*14.4) @tops @repeats;
+}
+//联系我们
+.footer_r_4 {
+    background: url(../images/i_img.png) @template-lefts @template-number @repeats;
+    background-size: @template-number*8 @template-number*4;
+    height: @template-number*4;
+    clear: @boths;
+    padding: @template-number @zeros @template-number*2 @zeros;
+    cursor: @pointers;
+    p {
+        padding-left: @template-number*5;
+        line-height: @template-number*2;
+        color: @colors_9;
+    }
+}
+.footer_r_4_1 {
+    font-size: @template-number*1.2;
+}
+.end {
+    text-align: @centers;
+    font-size: @template-number*1.2;
+    color: @colors_9;
+    line-height: @template-number*6;
+}
+
+
+
+
+
+
+
